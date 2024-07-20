@@ -27,7 +27,7 @@ export default function Example() {
     <LayoutGroup>
       <ul className={styles.gallery}>
         {items.map((item) => (
-          <Item {...item} onClick={() => setSelectedId(item.id)} />
+          <Item key={item.id} {...item} onClick={() => setSelectedId(item.id)} />
         ))}
       </ul>
       <AnimatePresence>

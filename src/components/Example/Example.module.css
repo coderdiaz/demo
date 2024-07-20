@@ -14,7 +14,7 @@
   background-color: #fff;
   cursor: pointer;
   will-change: transform;
-  @apply shadow-md border border-gray-200;
+  @apply shadow-md shadow-purple-700 border border-gray-200 rounded-xl;
 
   &:nth-child(1) {
     grid-column: span 2;
@@ -39,7 +39,8 @@
 }
 .modal {
   flex: 1 1 auto;
-  @apply relative overflow-hidden w-full h-full bg-white shadow-lg border border-gray-300 pointer-events-auto will-change-transform z-50 p-6;
+  z-index: 9999;
+  @apply relative overflow-hidden w-full h-full bg-white shadow-lg border border-gray-300 pointer-events-auto will-change-transform p-6 rounded-xl;
 }
 .backdrop {
   @apply absolute top-0 z-0 left-0 w-full h-full bg-black/80 cursor-pointer;
