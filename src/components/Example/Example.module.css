@@ -1,0 +1,50 @@
+.gallery {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+  list-style: none;
+  padding: 6rem;
+}
+
+.item {
+  padding: 2rem;
+  background-color: #fff;
+  cursor: pointer;
+  will-change: transform;
+  @apply shadow-md border border-gray-200;
+
+  &:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  &:nth-child(2) {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+  &:nth-child(3) {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+  &:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+.modalContainer {
+  @apply absolute z-10 top-0 left-0 flex w-full h-full place-content-center place-items-center pointer-events-none p-20;
+}
+.modal {
+  flex: 1 1 auto;
+  @apply relative overflow-hidden w-full h-full bg-white shadow-lg border border-gray-300 pointer-events-auto will-change-transform z-50 p-6;
+}
+.backdrop {
+  @apply absolute top-0 z-0 left-0 w-full h-full bg-black/80 cursor-pointer;
+}
+
+.close {
+  @apply absolute top-0 right-0 mt-4 mr-4 p-2 cursor-pointer bg-gray-100 rounded-full;
+}
